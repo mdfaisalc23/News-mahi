@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Breaking News - Mahwish</title>
+<style>
+body{margin:0;font-family:Arial;background:#111;color:#fff;overflow:hidden}
+.top{background:#b30000;color:#fff;padding:14px;text-align:center;font-size:32px;font-weight:bold;animation:flash .8s infinite}
+@keyframes flash{50%{background:#ff1a1a}}
+.ticker{position:fixed;bottom:0;width:100%;background:#c00;white-space:nowrap;overflow:hidden;padding:10px 0}
+.ticker span{display:inline-block;padding-left:100%;animation:scroll 18s linear infinite}
+@keyframes scroll{to{transform:translateX(-120%)}}
+.wrap{display:flex;justify-content:center;align-items:center;height:calc(100vh - 90px)}
+.card{background:#222;padding:25px;border-radius:15px;max-width:700px;box-shadow:0 0 20px #000}
+h2{color:#ff4d4d}.meter{height:22px;background:#444;border-radius:20px;overflow:hidden}
+.fill{height:100%;width:100%;background:lime;animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:.5}}
+button{margin-top:20px;padding:12px 20px;border:none;background:#e60000;color:#fff;border-radius:8px;font-size:18px;cursor:pointer}
+#end{display:none;text-align:center}
+</style>
+</head>
+<body>
+<div class="top">🚨 BREAKING NEWS 🚨</div>
+<div class="wrap">
+<div class="card" id="news">
+<h2>LIVE REPORT</h2>
+<p><b>Authorities have confirmed that a girl named <span style="color:#ffcc66">Mahwish</span> has been spreading an unusual amount of happiness across the city.</b></p>
+<p>📋 Reported Symptoms:</p>
+<ul>
+<li>😂 Random laughter</li>
+<li>😊 Instant smiles</li>
+<li>🌈 Positive vibes everywhere</li>
+<li>💖 Stress disappears mysteriously</li>
+</ul>
+<p><b>Happiness Meter</b></p>
+<div class="meter"><div class="fill"></div></div>
+<button onclick="finish()">View Official Statement</button>
+<div id="end">
+<hr>
+<h2>🏆 OFFICIAL VERDICT</h2>
+<h1>👑 Mahwish is declared</h1>
+<h1 style="color:gold">Chief Happiness Officer of Earth 🌍</h1>
+<p>Scientists are still investigating how one person can spread this much joy. 😄</p>
+<p>🍫 Reward: Unlimited smiles and one virtual chocolate.</p>
+</div>
+</div>
+</div>
+<div class="ticker"><span>🔴 LIVE • Public Advisory: If you meet Mahwish, don't panic... just smile back! 😄 • Happiness Level: 100% • Warning: Her smile may brighten your day! ☀️</span></div>
+<script>
+function finish(){
+document.getElementById('end').style.display='block';
+window.scrollTo(0,document.body.scrollHeight);
+}
+</script>
+</body></html>
